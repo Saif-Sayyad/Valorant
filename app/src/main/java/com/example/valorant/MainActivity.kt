@@ -28,64 +28,11 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            val painter = painterResource(id = R.drawable.fade)
-            val title = "Fade"
-            val contentDescription = "Fade"
-            Box(modifier = Modifier
-                    .padding(horizontal = 100.dp)
-                .fillMaxWidth()
-
-            ){
-                ImageCard(painter = painter, title = title, contentDescription = contentDescription)
-
-            }
-
-
-            }
-        }
-    }
-
-
-@Composable
-fun ImageCard(
-painter: Painter,
-title: String,
-contentDescription: String,
-modifier: Modifier = Modifier
-) {
-    Card(
-        //shape = RoundedCornerShape(15.dp),
-        //elevation = 5.dp
-        modifier = modifier
-            .fillMaxWidth()
-            .clickable { }
-
-
-
-    ) {
-        Box(modifier = Modifier.height(200.dp),
-                contentAlignment = Alignment.Center) {
-            Image(
-                painter = painter,
-                contentDescription = contentDescription,
-                contentScale = ContentScale.Crop
-
-
-            )
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(12.dp),
-                contentAlignment = Alignment.BottomCenter
-            ) {
-                Text(title, style = TextStyle(color = Color.White, fontSize = 20.sp))
-
-
-            }
-
+           AgentsList()
         }
     }
 }
+
 
 
 
