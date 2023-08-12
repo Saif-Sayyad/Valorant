@@ -14,9 +14,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
-@Preview
 @Composable
-fun AgentsDetailScreen(){
+fun AgentsDetailScreen(
+    navController: NavController
+){
     Surface(modifier = Modifier.fillMaxSize()) {
         Box() {
             Column(modifier = Modifier
