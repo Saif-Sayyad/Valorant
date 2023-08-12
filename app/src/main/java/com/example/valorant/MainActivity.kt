@@ -28,11 +28,22 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-           AgentsList()
+         SetUpAppNavGraph()
         }
     }
 }
-
+@Composable
+fun SetUpAppNavGraph() {
+    val navController = rememberNavController()
+    NavHost(navController = navController, startDestination = "agentslist") {
+          composable("agentslist"){
+              AgentsList(navController)
+          }
+        composable("agentsdetail"){
+            AgentsDetailScreen(navController)
+        }
+    }
+}
 
 
 

@@ -15,7 +15,9 @@ import androidx.compose.ui.unit.dp
 
 
 @Composable
-fun AgentsList() {
+fun AgentsList(
+    navController: NavController
+) {
     Surface(
         modifier = Modifier.fillMaxSize(),
     ) {
@@ -32,7 +34,10 @@ fun AgentsList() {
         LazyColumn(modifier = Modifier.padding(top = 80.dp) ){
             items(20) {
                 Row() {
-                    Column(modifier = Modifier.fillMaxWidth(),
+                    Column(modifier = Modifier.fillMaxWidth()
+                        .clickable {
+                                  navController.navigate("agentsdetail")
+                        },
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
                         Image(painter = painterResource(id = R.drawable.fade),
