@@ -22,6 +22,9 @@ import androidx.compose.ui.text.TextStyle
 
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import com.example.valorant.ui.theme.ValorantTheme
 
 class MainActivity : ComponentActivity() {
